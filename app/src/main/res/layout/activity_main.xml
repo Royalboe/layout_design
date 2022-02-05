@@ -9,46 +9,46 @@
 
     <ImageView
         android:id="@+id/instagram"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
+        android:layout_width="@dimen/bigger_icon_size"
+        android:layout_height="@dimen/bigger_icon_size"
         android:layout_marginTop="@dimen/margin_wide"
+        android:contentDescription="@string/instagram"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/instagram"
-        android:contentDescription="@string/instagram" />
+        app:srcCompat="@drawable/instagram" />
 
     <androidx.appcompat.widget.LinearLayoutCompat
         android:id="@+id/edit_texts"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/instagram"
+        android:layout_marginTop="@dimen/margin_wide"
+        android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        android:orientation="vertical"
-        android:layout_marginTop="@dimen/margin_wide">
+        app:layout_constraintTop_toBottomOf="@id/instagram">
 
         <EditText
             android:id="@+id/editTextTextEmailAddress"
             style="@style/text_style"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/margin"
             android:layout_marginStart="8dp"
+            android:layout_marginTop="@dimen/margin"
             android:layout_marginEnd="8dp"
             android:layout_marginBottom="@dimen/margin"
+            android:background="@drawable/rectangle_circle"
             android:drawableStart="@drawable/email"
             android:drawablePadding="8dp"
             android:hint="@string/email"
+            android:importantForAutofill="no"
             android:inputType="textEmailAddress"
             android:minHeight="@dimen/text_box_height"
-            android:textSize="@dimen/text_size"
             android:paddingStart="@dimen/padding"
             android:paddingEnd="@dimen/padding"
-            android:background="@drawable/rectangle_circle"
+            android:textSize="@dimen/text_size"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            android:importantForAutofill="no" />
+            app:layout_constraintStart_toStartOf="parent" />
 
         <EditText
             android:id="@+id/editTextTextPassword"
@@ -73,36 +73,33 @@
 
     <TextView
         android:id="@+id/forgot_password_text"
+        style="@style/text_style"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/forgot_password"
-        style="@style/text_style"
-        android:minHeight="@dimen/text_min_height"
         android:layout_marginTop="@dimen/margin"
-        app:layout_constraintTop_toBottomOf="@id/edit_texts"
+        android:minHeight="@dimen/text_min_height"
+        android:text="@string/forgot_password"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent">
-    </TextView>
+        app:layout_constraintTop_toBottomOf="@id/edit_texts"/>
 
     <Button
         android:id="@+id/login_button"
+        style="@style/text_style"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/margin_wide"
-        style="@style/text_style"
         android:background="@drawable/button_drawable"
         android:backgroundTint="@color/white"
-        app:backgroundTint="@color/white"
         android:drawableEnd="@drawable/login_arrow"
         android:minHeight="@dimen/text_box_height"
         android:text="@string/login"
         android:textAllCaps="false"
-        android:textColor="@color/background"
+        android:textColor="@color/background_gradient_center"
+        app:backgroundTint="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/forgot_password_text"
-        >
-    </Button>
+        app:layout_constraintTop_toBottomOf="@id/forgot_password_text"/>
 
 
     <TextView
@@ -110,42 +107,48 @@
         style="@style/text_style"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
         android:layout_marginEnd="@dimen/margin"
         android:minHeight="@dimen/text_min_height"
         android:paddingTop="@dimen/padding"
         android:text="@string/sign_up"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@id/facebook"
-        app:layout_constraintTop_toBottomOf="@+id/login_button">
-    </TextView>
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/login_button"/>
 
     <ImageView
         android:id="@+id/facebook"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:layout_marginStart="@dimen/margin"
+        android:layout_width="@dimen/smaller_icon_size"
+        android:layout_height="@dimen/smaller_icon_size"
         android:background="@drawable/circle_rect"
         android:contentDescription="@string/facebook"
-        android:padding="15dp"
+        android:padding="@dimen/image_padding"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/google"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@id/sign_up"
         app:layout_constraintTop_toBottomOf="@+id/login_button"
-        app:srcCompat="@drawable/facebook">
-    </ImageView>
+        app:srcCompat="@drawable/facebook"
+        tools:ignore="ImageContrastCheck" />
 
     <ImageView
         android:id="@+id/google"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
+        android:layout_width="@dimen/smaller_icon_size"
+        android:layout_height="@dimen/smaller_icon_size"
         android:layout_marginStart="@dimen/margin"
+        android:layout_marginEnd="25dp"
         android:background="@drawable/circular_shape"
         android:contentDescription="@string/google"
         android:padding="@dimen/padding"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@id/facebook"
         app:layout_constraintTop_toBottomOf="@+id/login_button"
-        app:srcCompat="@drawable/google">
-    </ImageView>
+        app:srcCompat="@drawable/google"
+        tools:ignore="ImageContrastCheck" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
