@@ -9,8 +9,9 @@
 
     <ImageView
         android:id="@+id/instagram"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="@dimen/margin_wide"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -25,7 +26,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         android:orientation="vertical"
-        android:layout_marginTop="@dimen/margin">
+        android:layout_marginTop="@dimen/margin_wide">
 
         <EditText
             android:id="@+id/editTextTextEmailAddress"
@@ -35,31 +36,39 @@
             android:layout_marginTop="@dimen/margin"
             android:layout_marginStart="8dp"
             android:layout_marginEnd="8dp"
+            android:layout_marginBottom="@dimen/margin"
             android:drawableStart="@drawable/email"
             android:drawablePadding="8dp"
             android:hint="@string/email"
             android:inputType="textEmailAddress"
             android:minHeight="@dimen/text_box_height"
             android:textSize="@dimen/text_size"
+            android:paddingStart="@dimen/padding"
+            android:paddingEnd="@dimen/padding"
+            android:background="@drawable/rectangle_circle"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             android:importantForAutofill="no" />
 
         <EditText
             android:id="@+id/editTextTextPassword"
-            android:hint="@string/password"
+            style="@style/text_style"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
+            android:layout_marginTop="@dimen/margin"
             android:layout_marginEnd="8dp"
+            android:background="@drawable/rectangle_circle"
             android:drawableStart="@drawable/lock"
             android:drawablePadding="8dp"
+            android:hint="@string/password"
+            android:importantForAutofill="no"
+            android:inputType="text|textPassword|numberPassword"
+            android:paddingStart="@dimen/padding"
+            android:paddingEnd="@dimen/padding"
             app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginTop="@dimen/margin"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/editTextTextEmailAddress"
-            style="@style/text_style"
-            android:importantForAutofill="no" />
+            app:layout_constraintTop_toBottomOf="@+id/editTextTextEmailAddress" />
     </androidx.appcompat.widget.LinearLayoutCompat>
 
     <TextView
@@ -79,8 +88,11 @@
         android:id="@+id/login_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/margin_moderate"
+        android:layout_marginTop="@dimen/margin_wide"
+        style="@style/text_style"
+        android:background="@drawable/button_drawable"
         android:backgroundTint="@color/white"
+        app:backgroundTint="@color/white"
         android:drawableEnd="@drawable/login_arrow"
         android:minHeight="@dimen/text_box_height"
         android:text="@string/login"
@@ -89,7 +101,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/forgot_password_text"
-        app:shapeAppearanceOverlay="@style/one_rounded">
+        >
     </Button>
 
 
@@ -98,45 +110,42 @@
         style="@style/text_style"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/margin_bigger"
+        android:layout_marginEnd="@dimen/margin"
         android:minHeight="@dimen/text_min_height"
         android:paddingTop="@dimen/padding"
         android:text="@string/sign_up"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@id/facebook"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/login_button">
+        app:layout_constraintEnd_toStartOf="@id/facebook"
+        app:layout_constraintTop_toBottomOf="@+id/login_button">
     </TextView>
 
     <ImageView
         android:id="@+id/facebook"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
         android:layout_marginStart="@dimen/margin"
-        android:layout_marginTop="@dimen/margin_bigger"
+        android:background="@drawable/circle_rect"
+        android:contentDescription="@string/facebook"
+        android:padding="15dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@id/google"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@id/sign_up"
-        app:layout_constraintTop_toBottomOf="@id/login_button"
-        app:srcCompat="@drawable/facebook"
-        android:background="@drawable/rectangle_circle">
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/login_button"
+        app:srcCompat="@drawable/facebook">
     </ImageView>
 
     <ImageView
         android:id="@+id/google"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
         android:layout_marginStart="@dimen/margin"
-        android:layout_marginTop="@dimen/margin_bigger"
+        android:background="@drawable/circular_shape"
+        android:contentDescription="@string/google"
+        android:padding="@dimen/padding"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@id/facebook"
-        app:layout_constraintTop_toBottomOf="@id/login_button"
-        app:srcCompat="@drawable/google"
-        android:background="@drawable/circular_shape">
+        app:layout_constraintTop_toBottomOf="@+id/login_button"
+        app:srcCompat="@drawable/google">
     </ImageView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
