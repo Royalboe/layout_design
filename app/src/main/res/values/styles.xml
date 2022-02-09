@@ -9,6 +9,14 @@
         <item name="android:textSize">@dimen/text_size</item>
     </style>
 
+    <style name="text_style_weather">
+        <item name="android:fontFamily">@font/silka_regular_400</item>
+        <item name="android:minHeight">@dimen/text_box_height</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textColorHint">@color/white</item>
+        <item name="android:textSize">@dimen/text_size</item>
+    </style>
+
     <style name="one_rounded">
         <item name="cornerFamily">rounded</item>
         <item name="cornerSize">0dp</item>

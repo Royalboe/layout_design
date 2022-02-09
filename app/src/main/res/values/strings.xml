@@ -8,4 +8,10 @@
     <string name="facebook">Facebook icon</string>
     <string name="google">Google icon</string>
     <string name="instagram">instagram</string>
+    <string name="city_name">LAGOS, NIGERIA</string>
+    <string name="weather">32 \u00B0 C</string>
+    <string name="humidity">54%</string>
+    <string name="speed">10K/M</string>
+    <string name="rain">0%</string>
+    <string name="date">WEDNESDAY, FEBRUARY 9</string>
 </resources>

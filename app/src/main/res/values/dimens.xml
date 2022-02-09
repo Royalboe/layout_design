@@ -14,5 +14,6 @@
     <dimen name="text_box_height">48dp</dimen>
     <dimen name="radius">60dp</dimen>
     <dimen name="smaller_icon_size">50dp</dimen>
+    <dimen name="text_size_big"> 50sp </dimen>
     <dimen name="bigger_icon_size">100dp</dimen>
 </resources>

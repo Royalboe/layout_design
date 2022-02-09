@@ -9,5 +9,7 @@
     <color name="white">#FFFFFFFF</color>
     <color name="background">#0E3C2F</color>
     <color name="background_gradient_center">#FD105338</color>
+    <color name="background_tint">#92105338</color>
+    <color name="background_tint_linear">#8A105338</color>
     <color name="background_gradient">#25B178</color>
 </resources>
